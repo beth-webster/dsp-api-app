@@ -8,7 +8,7 @@ def ids_from_urls(at_links):
     
     for url in at_links:        
         try:
-            url_regex = re.search(r"(?<=i=)\d+", url)            
+            url_regex = re.search(r"(\d+)$", url)            
             if url_regex:
                 url_id_map[url] = url_regex.group()
                 
